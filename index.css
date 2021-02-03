@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-family: Neutrif, Montserrat, sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: Neutrif, Montserrat, sans-serif;
+}
+
+p {
+  font-family: Neutrif, Montserrat, sans-serif;
+  margin: 0;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Neutrif;
+  src: url("./assets/fonts/NeutrifPro-Light.otf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Neutrif;
+  src: url("./assets/fonts/NeutrifPro-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Neutrif;
+  src: url("./assets/fonts/NeutrifPro-Medium.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: Neutrif;
+  src: url("./assets/fonts/NeutrifPro-Bold.otf");
+  font-weight: bold;
+}
+
+input,
+select,
+span,
+textarea {
+  font-family: Neutrif, Montserrat, sans-serif;
+}
+
+.app-container {
+  width: 800px;
+  background-color: #fff;
+  display: flex;
+}
+
+.main-content {
+  width: 70%;
+}
+
+.sidebar-container {
+  background-color: #4160f4;
+  width: 30%;
+  height: 100%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.sidebar-inner-container {
+  padding: 2rem;
+}
+
+.sidebar-search-field {
+  width: 100%;
+  border-radius: 25px;
+  background-color: #3752d5;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+.sidebar-search-field::placeholder {
+  color: #fff;
+}
+
+.sidebar-contacts {
+  padding-top: 2rem;
+}
+
+.contact-card-container {
+  display: flex;
+  align-items: center;
+  padding: 0 0.3rem;
+  margin: 1rem 0;
+  color: #fff;
+  width: 100%;
+}
+
+.contact-card-inner-container {
+  width: 100%;
+}
+
+.contact-card-image {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5rem;
+}
+
+.contact-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+}
+
+.contact-card-message {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.header-text {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.header-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e1dbdb;
+  margin: 0 0.5rem;
+  border: none;
+}
+
+.header-button img {
+  width: 12.5px;
+  height: 12.5px;
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  height: calc(100% - 56px);
+}
+
+.chat-contact-message {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin: 1rem 0;
+}
+
+.chat-contact-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.chat-contact-message-box,
+.chat-user-message-box {
+  background-color: #30bf92;
+  border-radius: 3px;
+  max-width: 300px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.chat-user-message-box {
+  background-color: #f1f1f1;
+  color: #1d1d1d;
+  margin-left: auto;
+}
+
+.chat-input-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.chat-input-message {
+  padding: 0.5rem;
+  width: 85%;
+  border: none;
+}
+
+.chat-input-button {
+  width: 15%;
+  background-color: #4160f4;
+  color: #fff;
+  height: 100%;
+  border: none;
+}
