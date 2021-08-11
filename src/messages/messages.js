@@ -1,31 +1,31 @@
-import { messages, contacts } from "../../data.js";
+import { contacts } from "../../data.js";
 
-const currentUser = "1f531c46-3261-11eb-adc1-0242ac120002";
+const currentUser = "177b547a-3261-11eb-adc1-0242ac120002";
 
-const createMainContent = () => {
+const createMessages = (messageSetId, messages, updateMessages) => {
   const container = document.createElement("div");
   container.classList.add("main-content-container");
 
-  const currentChat = messages[currentUser];
+  const currentChat = messages[messageSetId];
 
   currentChat.forEach((message) => {
     let createdMessage;
     if (message.owner === currentUser) {
-      createdMessage = createContactMessage(message);
-    } else {
       createdMessage = createUserMessage(message);
+    } else {
+      createdMessage = createContactMessage(message);
     }
     container.appendChild(createdMessage);
   });
 
-  const input = createChatInput();
+  const input = createChatInput(updateMessages, messageSetId);
 
   container.appendChild(input);
 
   return container;
 };
 
-const createChatInput = () => {
+const createChatInput = (updateMessages, messageSetId) => {
   const container = document.createElement("div");
   container.classList.add("chat-input-container");
 
@@ -37,6 +37,16 @@ const createChatInput = () => {
   const button = document.createElement("button");
   button.textContent = "Send";
   button.classList.add("chat-input-button");
+
+  button.addEventListener("click", () => {
+    const messageObject = {
+      content: input.value,
+      timestamp: 123001231,
+      owner: "177b547a-3261-11eb-adc1-0242ac120002",
+    };
+
+    updateMessages(messageObject, messageSetId);
+  });
 
   container.appendChild(input);
   container.appendChild(button);
@@ -82,4 +92,4 @@ const getContact = (id) => {
   return contacts.find((contact) => contact.id === id);
 };
 
-export default createMainContent();
+export default createMessages;

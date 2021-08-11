@@ -5,47 +5,6 @@
 // boolean
 // symbol
 
-const tweets = [
-  {
-    username: "Programming Wisdom",
-    handle: "@CodeWisdom",
-    id: "177b547a-3261-11eb-adc1-0242ac1200332",
-    createdAt: 1611520385,
-    content:
-      '"The first step of any project is to grossly underestimate its complexity and difficulty." – Nicoll Hunt',
-    comments: 357,
-    retweets: 9200,
-    favorites: 65000,
-  },
-  {
-    username: "I Am Devloper",
-    handle: "@iamdevloper",
-    id: "177b547a-3261-11eb-adc1-0242ac1200321",
-    createdAt: 1611520382,
-    content:
-      "“Once COVID is over” is starting to sound a lot like “once I’ve launched this side project”",
-    comments: 41,
-    retweets: 1100,
-    favorites: 6600,
-  },
-  {
-    username: "Elena",
-    handle: "@ETchalakov",
-    id: "177b547a-3261-11eb-adc1-0242ac1200321",
-    createdAt: 1611520382,
-    content: `I didn't realize how addicting Twitter is, until yesterday when I actually got some engagement Rolling on the floor laughing
-
-It's neat connecting with other tech folks. Please, introduce yourself!!! Slightly smiling face
-
-I'm Elena, 35, studying Ruby, end goal is to be a developer (of some sort).`,
-    comments: 328,
-    retweets: 96,
-    favorites: 2600,
-    imageUrl:
-      "https://twitter.cdn.com/ETchalakov/177b547a-3261-11eb-adc1-0242ac1200321/profilepicture.jpg",
-  },
-];
-
 export const user = {
   name: "Julian",
   id: "177b547a-3261-11eb-adc1-0242ac120002",
